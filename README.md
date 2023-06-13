@@ -39,3 +39,64 @@ python manage.py createsuperuser
 admin / email@email.com / 123456 / y
 
 editar admin.py
+
+=================================================================
+python manage.py shell
+
+from core.models import Produto
+
+dir(Produto)
+
+produtos = Produto.objects.all()
+
+for produto in produtos:
+    print(produto)
+
+Produto.objects.count()
+
+Produto.objects.last()
+
+Produto.objects.firt()
+
+Produto.objects.filter(id=1)
+=================================================================
+
+criar pasta static
+
+criar pastas: css, js, images
+
+crair arquivos html, js e imagens.
+
+python manage.py collectstatic
+
+pip install whitenoise gunicorn
+
+criar runtime.txt
+
+criar Procfile
+
+pip freeze > requirements.txt
+
+criar .gitignore
+
+git init
+
+git add .
+
+git config user.email "seuemail@email.com"
+
+git config user.name  "seu user"
+
+git commit -m "Projeto finalizado"
+
+cadastrar heroku
+
+sudo snap install heroku --classic
+
+heroku login
+
+heroku create dominio --buildpack heroku/python
+
+git push heroku master
+
+heroku logs --tail
